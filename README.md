@@ -19,7 +19,7 @@ Backend : NodeJS : Express
 Frontend: ReactJS
 Database: MongoDB
 
-This documentation is for the **TODO APP** which handles the users' authentication and manager todo list.It will provide details on the setup required to start this server in the [Initial setup chapter](#initial-setup), how are the folders organized in the [Project structure chapter](#project-structure), how to document this code in [Code documentation](#code-documentation), and finally how to manage this project's version using git in the [Git chapter](#git).
+This documentation is for the **TODO APP** which handles the users authentication and manager todo list.It will provide details on the setup required to start this server in the [Initial setup chapter](#initial-setup), how are the folders organized in the [Project structure chapter](#project-structure), how to document this code in [Code documentation](#code-documentation), and finally how to manage this project's version using git in the [Git chapter](#git).
 
 # Initial setup
 
@@ -31,17 +31,19 @@ In order to start using this project, you need to have these tools installed in 
 # Command to run
 node -v
 # Command output if nodeJS is installed:
-v16.10.0
+v16.14.0
 ```
 
 - Setup the [.env](.env) file with the `JWT_SECRET`,`HTTP_PORT`,`MONGODB_URI` and `JWT_EXPIRATION` variables.
+
+- For this test, the HTTP_PORT is equal to `5000`.
 
 # Running the project
 
 - Clone this project
 
 ```properties
-git clone git@gitlab.com:swisspremiumnegoce/backend-kubernetes-authentication.git
+git clone https://github.com/mohamedyoussefjemai/TODO-app.git
 ```
 
 - Make sure your local repository is up to date with the remote changes
@@ -221,7 +223,7 @@ The code will also include comments describing what are the actions performed by
 
 # Git
 
-This project is available on [GitHub](https://gitlab.com/swisspremiumnegoce/backend-kubernetes-authentication), and will be updated as frequently as possible.
+This project is available on [GitHub](https://github.com/mohamedyoussefjemai/TODO-app.git), and will be updated as frequently as possible.
 
 # Steps to follow before committing
 
@@ -230,7 +232,19 @@ Committing a change to git is the final step to do once a feature is developed a
 - Check if your code is clean by running
 
 ```properties
+# If using npm
+npm run lint:check
+# If using yarn
 yarn lint:check
+```
+
+- Check if your code is clean with prettier by running
+
+```properties
+# If using npm
+npm run format:check
+# If using yarn
+yarn format:check
 ```
 
 - If the command returns no errors, you can proceed and commit your work.
