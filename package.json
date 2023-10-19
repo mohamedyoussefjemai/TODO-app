@@ -1,0 +1,56 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo app",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon app.js --ignore client",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-client": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "start": "node app.js",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "seed:users": "node src/libs/common/seed/users.seed.js",
+    "seed:todos": "node src/libs/common/seed/todos.seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/joi": "^17.2.3",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "path": "^0.12.7",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "eslint": "^8.51.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=10.6.0"
+  }
+}
